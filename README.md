@@ -34,7 +34,7 @@ def send_vital_signs(data: VitalSignsModel):
 
 This code creates a FastAPI app with a single endpoint that accepts a` POST` request with a JSON payload containing the patients' vital signs data to be sent to the AWS cloud. The `send_vital_signs` function uses the boto3 library to connect to the AWS cloud and publish the data to a specified SNS (Simple Notification Service) topic.
 
->  We can modify this base code modify it to suit our specific use case. For example, you may want to add authentication, validate the data being sent, or handle errors appropriately. For more info check `deploy.py` script.
+>  We can modify this base code modify it to suit our specific use case. For example, you may want to add authentication, validate the data being sent, or handle errors appropriately. For more info check `Dep.py` script.
 
 You can then use this endpoint to send data from your IoT network to the AWS cloud in real-time by making `POST` requests to this endpoint with the data as the request payload.
 
