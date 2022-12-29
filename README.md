@@ -1,6 +1,30 @@
 # FastApi-IoT-AWS
 Using FASTAPI for sending patients vital signs real-time from an IoT network to AWS cloud
 
+```markdown
+                                                       +------------+
+                                                       | AWS Cloud  |
+                                                       +------------+
+                                                             |
+                                                             | receive data
+                                                             v
++------------+    authenticate    +-------------+    send data    +------------+
+| IoT Device | -------------------> | FASTAPI API | -------------------> | Database |
++------------+                    +-------------+                     +------------+
+                                                                            |
+                                                                            | store data
+                                                                            v
+                                                                  +------------+
+                                                                  | Data Backup |
+                                                                  +------------+
+                                                                            |
+                                                                            | store data
+                                                                            v
+                                                             +------------+
+                                                             | Data Warehouse |
+                                                             +------------+
+
+```
 
 #### Base code
 ```python
